@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PassTimesTableViewCell" rowHeight="73" id="KGk-i7-Jjw" customClass="PassTimesTableViewCell" customModule="ISSPassTimes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="73"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="72.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass Time:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nps-EA-Ev6">
+                        <rect key="frame" x="55" y="10" width="248" height="23.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Duration:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xg-qg-8av">
+                        <rect key="frame" x="55" y="41.5" width="248" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="s.no" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvT-U3-lfb">
+                        <rect key="frame" x="16" y="10" width="35" height="23.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="xGh-i0-gBO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="nps-EA-Ev6" secondAttribute="trailing" constant="16" id="6Cx-4a-Mm5"/>
+                    <constraint firstItem="8Xg-qg-8av" firstAttribute="trailing" secondItem="nps-EA-Ev6" secondAttribute="trailing" id="8mj-ZF-zHP"/>
+                    <constraint firstItem="nps-EA-Ev6" firstAttribute="leading" secondItem="FvT-U3-lfb" secondAttribute="trailing" constant="4" id="Mzd-ZI-CL5"/>
+                    <constraint firstItem="FvT-U3-lfb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Ott-0c-3fS"/>
+                    <constraint firstItem="8Xg-qg-8av" firstAttribute="leading" secondItem="nps-EA-Ev6" secondAttribute="leading" id="U5e-7C-fnC"/>
+                    <constraint firstItem="nps-EA-Ev6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Yhc-sv-4SD"/>
+                    <constraint firstItem="FvT-U3-lfb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="se2-ww-7md"/>
+                    <constraint firstItem="8Xg-qg-8av" firstAttribute="top" secondItem="nps-EA-Ev6" secondAttribute="bottom" constant="8" id="twz-2F-vPj"/>
+                    <constraint firstItem="nps-EA-Ev6" firstAttribute="baseline" secondItem="FvT-U3-lfb" secondAttribute="baseline" id="vWj-MN-5ZL"/>
+                    <constraint firstAttribute="bottom" secondItem="8Xg-qg-8av" secondAttribute="bottom" constant="10" id="ymo-7G-Xqk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="duration" destination="8Xg-qg-8av" id="pbV-2f-5k5"/>
+                <outlet property="passTime" destination="nps-EA-Ev6" id="fk2-iP-A3g"/>
+                <outlet property="serialNo" destination="FvT-U3-lfb" id="XLb-bQ-nrG"/>
+            </connections>
+            <point key="canvasLocation" x="25.5" y="66.5"/>
+        </tableViewCell>
+    </objects>
+</document>

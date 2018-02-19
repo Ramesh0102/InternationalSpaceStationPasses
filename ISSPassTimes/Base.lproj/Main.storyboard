@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gjV-fq-NaO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ISS Pass Times-->
+        <scene sceneID="xBQ-DQ-A3o">
+            <objects>
+                <tableViewController id="Le3-zX-wJ7" customClass="PassTimesTableViewController" customModule="ISSPassTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6lt-He-GaX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Le3-zX-wJ7" id="eCv-g1-PcV"/>
+                            <outlet property="delegate" destination="Le3-zX-wJ7" id="oJS-R1-HBJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="ISS Pass Times" id="fS6-FH-lnP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="L2n-Qu-Fka">
+                            <connections>
+                                <action selector="refreshData:" destination="Le3-zX-wJ7" id="UTj-YO-ITa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Mm-Lk-wow" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1170.4000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Welcome!-->
+        <scene sceneID="pHJ-SA-epb">
+            <objects>
+                <viewController id="On4-Wb-kJa" customClass="WelcomePageViewController" customModule="ISSPassTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cpi-Of-kcz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGt-V7-Hbc">
+                                <rect key="frame" x="36.5" y="315.5" width="302" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Click here for ISSPass Times  &gt;&gt;"/>
+                                <connections>
+                                    <action selector="getLocation:" destination="On4-Wb-kJa" eventType="touchUpInside" id="CIe-Q6-NwO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yGt-V7-Hbc" firstAttribute="centerX" secondItem="cpi-Of-kcz" secondAttribute="centerX" id="SEn-dn-vL0"/>
+                            <constraint firstItem="yGt-V7-Hbc" firstAttribute="centerY" secondItem="cpi-Of-kcz" secondAttribute="centerY" id="l4V-LB-pRT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NZf-ly-c1F"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome!" id="hzg-uy-Tvs"/>
+                    <connections>
+                        <segue destination="Le3-zX-wJ7" kind="show" identifier="passesTimes" id="WM0-rr-SbK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u4C-DK-04Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279" y="155"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IJY-iI-1Vh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gjV-fq-NaO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sYD-Jo-jy1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="On4-Wb-kJa" kind="relationship" relationship="rootViewController" id="sKq-Ks-Udv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09I-ta-d6K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-698" y="132"/>
+        </scene>
+    </scenes>
+</document>
